@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 19, 2024 5:22:21 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="entity.TbKaryawan" table="tb_karyawan" catalog="db_karyawan">
+        <composite-id name="id" class="entity.TbKaryawanId">
+            <key-property name="idKaryawan" type="int">
+                <column name="id_karyawan" />
+            </key-property>
+            <key-property name="nikKaryawan" type="int">
+                <column name="nik_karyawan" />
+            </key-property>
+        </composite-id>
+        <property name="namaKaryawan" type="string">
+            <column name="nama_karyawan" not-null="true" />
+        </property>
+        <property name="usiaKaryawan" type="string">
+            <column name="usia_karyawan" length="2" not-null="true" />
+        </property>
+        <property name="statusKaryawan" type="string">
+            <column name="status_karyawan" length="7" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
